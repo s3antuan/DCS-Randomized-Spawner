@@ -5,7 +5,6 @@
 -- This is a combined revision code of Randomized_AI_Spawner_v3.1 & Onetime_AI_Spawner_v2
 --
 -- Version: v1
--- Author: Nyako 2-1 | ginmokusei
 -- Date: Oct. 2023
 --
 
