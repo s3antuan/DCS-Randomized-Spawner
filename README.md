@@ -22,6 +22,19 @@ While the former gives access to everyone in that coalition, the latter limits t
 
 ## Setup in the Mission Editor
 
+### Adding the Script
+
+This script requires MOOSE. You can find the latest version of MOOSE [here](https://github.com/FlightControl-Master/MOOSE).
+Be aware that this script does **not** work with [MIST](https://github.com/mrSkortch/MissionScriptingTools) loaded.
+
+Inside mission editor, first do to the trigger tab.
+Load MOOSE and [AI_Spawner_v1.lua](AI_Spawner_v1.lua) at mission start.
+Then load your mission script 5 seconds after mission start.
+
+### Placing Routes
+
+### Placing Templates
+
 ## RepeatingSpawner
 
 ## OnetimeSpawner
