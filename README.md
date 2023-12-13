@@ -14,4 +14,11 @@ This script comes with two types of spawner: **RepeatingSpawner** and **OnetimeS
 **RepeatingSpawner** is used when you want AI units to repeatedly spawn into the map at a given time interval. 
 You can also spawn one group to instantly using the F10 menu.
 Whereas **OnetimeSpawner** is used as an easy way to automatically spawn a large amount of similar units at the mission start (e.g. setup AAA or SAM). 
-You can also group up several OnetimeSpawners and activate these spawners later in the mission via the F10 menu.
+You can also group up several OnetimeSpawners and activate these spawners later during in the mission via the F10 menu.
+
+
+## Setup in the Mission Editor
+
+## RepeatingSpawner
+
+## OnetimeSpawner
