@@ -17,8 +17,8 @@ You can also instantly spawn in one group using the F10 menu.
 **OnetimeSpawner** is used as an easy way to automatically spawn a large amount of similar units at the mission start (e.g. setup AAA or SAM). 
 You can also group up several OnetimeSpawners and activate these spawners later during the mission via the F10 menu.
 
-The F10 menu controlling the spawners during the mission can set to attach to either a coalition (blue or red) or a certain group. 
-While the former gives access to everyone in that coalition, the latter limits the access to a group that can be either set or announced as host-only.
+The F10 menu controlling the spawners during the mission can be set to attach to either a coalition (blue or red) or a certain group. 
+While the former gives access to everyone in that coalition, the latter limits the access to a group that can be either set or announced as host-only at the cost of locking the host in the same slot the whole mission.
 
 ## Setup in the Mission Editor
 
