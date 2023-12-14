@@ -47,6 +47,12 @@ Then, load your mission script 5 seconds after mission start.
 
 ### Placing Routes
 
+Routes are where the spawner will choose to spawn units from.
+Set the waypoints, task, addvance waypoint options, and AI difficulty here.
+Name the group name accordingly. Be sure to set them as late activation.
+
+![image]()
+
 ### Placing Templates
 
 ## RepeatingSpawner
