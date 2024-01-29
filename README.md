@@ -42,18 +42,24 @@ Then, load your mission script 5 seconds after mission start.
 - Each spawner includes ONLY ONE unit category (airplane, helicopter, ground unit, or ship).
 - Each spawner corresponds to ONLY ONE task (e.g. CAP, CAS, ground attack, etc.)
 - **Routes** are refered to units placed on the map representing where the spawned units will go and what they are tasked for.
-- **Templates** are refered to units placed on the map representing the vehicle type, number and their payload the spawned units will be.
+- **Templates** are refered to units placed on the map representing a set of choices the spawned units will be chosen from.
 - Routes and templates can be shared between different spawners as long as they have the same unit category and task.
 
 ### Placing Routes
 
 Routes are where the spawner will choose to spawn units from.
-Set the waypoints, task, addvance waypoint options, and AI difficulty here.
+Set the waypoints, tasks, addvance waypoint options, and AI difficulty here.
 Name the group name accordingly. Be sure to set them as late activation.
 
 ![image]()
 
 ### Placing Templates
+
+Templates can be placed anywhere on the map. 
+Set the vehicle type, number of vehicles per group, their payloads, and their liveries here. 
+Name the group name accordingly and set them as late activation as well.
+
+![image]()
 
 ## RepeatingSpawner
 
