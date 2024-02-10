@@ -117,7 +117,7 @@ do
   end
 
   -- create the template table
-  local templateTbl_RED_AAA = {"RED AAA Template 001", "RED AAA Template 001", "RED AAA Template 002"}
+  local templateTbl_RED_AAA = {"RED AAA Template 001", "RED AAA Template 002", "RED AAA Template 003"}
 
   -- create a spawner
   local spawner_RED_AAA = OnetimeSpawner.new("RED AAA", routeTbl_RED_AAA, templateTbl_RED_AAA, 30)
@@ -127,6 +127,28 @@ do
 
   -- activate the spawner
   spawner_RED_AAA.run()
+end
+```
+
+## OnetimeSpawnerGroup
+
+Create a group of OnetimeSpawners (can only have one) for late activation via F10 menu.
+
+```lua
+do
+  -- let's say we already have two OnetimeSpawner set and ready
+  -- DO NOT call run() function for these two spawners
+  local routeTbl_RED_SAM_G1 = {"RED SAM 001", "RED SAM 002", "RED SAM 003"}
+  local routeTbl_RED_SAM_G2 = {"RED SAM 004", "RED SAM 005", "RED SAM 006"}
+  local templateTbl_RED_SAM = {"RED SAM Template 001", "RED SAM Template 002"}
+
+  local spawner_RED_SAM_G1 = OnetimeSpawner.new("RED SAM G1", routeTbl_RED_SAM_G1, templateTbl_RED_SAM, 2)
+  local spawner_RED_SAM_G2 = OnetimeSpawner.new("RED SAM G2", routeTbl_RED_SAM_G2, templateTbl_RED_SAM, 2)
+
+  -- create and setup a OnetimeSpawnerGroup
+  local group_RED_SAM = OnetimeSpawnerGroup.new("RED SAM Group", {spawner_RED_SAM_G1, spawner_RED_SAM_G2})
+  group_RED_SAM.setSubMenuBranchName("Mission Setup")
+  group_RED_SAM.run()
 end
 ```
 
