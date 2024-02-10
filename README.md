@@ -63,4 +63,45 @@ Name the group name accordingly and set them as late activation as well.
 
 ## RepeatingSpawner
 
+```lua
+do
+  -- For airplane or helicopter (air units)
+
+  -- create tables containing routes and templates respectively
+  local routeTbl_RED_CAP = {"RED CAP 001", "RED CAP 002", "RED CAP 003"}
+  local templateTbl_RED_CAP = {"RED CAP Template 001", "RED CAP Template 002"}
+
+  -- create and setup a spawner
+  local spawner_RED_CAP = RepeatingSpawner.new("RED CAP", routeTbl_RED_CAP, templateTbl_RED_CAP)
+  spawner_RED_CAP.setSubMenuBranchName("RED AIR")
+  spawner_RED_CAP.setRadiusVariation(24000)
+  spawner_RED_CAP.setHeightVariation(4000)
+  spawner_RED_CAP.setScheduleTable(1, {})
+  spawner_RED_CAP.setScheduleTable(2, {{300, 0.3}, {600, 0.3}})
+  spawner_RED_CAP.setScheduleTable(3, {{900, 0.3, 600, 0.3}})
+  spawner_RED_CAP.setScheduleTable(4, {{150, 0.3, 300, 0.3, 3600}})
+  spawner_RED_CAP.setInitialLevel(2)
+  spawner_RED_CAP.run()
+
+  -- ----------------------------------------
+  -- For ground unit or ship (not air units)
+
+  local routeTbl_RED_TANK = {"RED TANK 001", "RED TANK 002", "RED TANK 003", "RED TANK 004"}
+  local templateTbl_RED_TANK = {"RED TANK Template 001"}
+
+  local spawner_RED_TANK = RepeatingSpawner.new("RED TANK", routeTbl_RED_TANK, templateTbl_RED_TANK)
+  spawner_RED_TANK.setSubMenuBranchName("RED GROUND")
+  spawner_RED_TANK.setRadiusVariation(3000)
+  spawner_RED_TANK.setScheduleTable(1, {})
+  spawner_RED_TANK.setScheduleTable(2, {{600, 0.3, 1200, 0.3}})
+  spawner_RED_TANK.setInitialLevel(1)
+  spawner_RED_TANK.run()
+
+  -- ----------------------------------------
+  -- A helper function to add a F10 menu for checking the current status of the spwaners
+
+  MenuShowRepeatingSpawnerStatus({spawner_RED_CAP, spawner_RED_TANK})
+end
+```
+
 ## OnetimeSpawner
