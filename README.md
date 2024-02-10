@@ -83,12 +83,14 @@ do
   spawner_RED_CAP.setInitialLevel(2)
   spawner_RED_CAP.run()
 
-  -- ----------------------------------------
+
   -- For ground unit or ship (not air units)
 
+  -- create tables containing routes and templates respectively
   local routeTbl_RED_TANK = {"RED TANK 001", "RED TANK 002", "RED TANK 003", "RED TANK 004"}
   local templateTbl_RED_TANK = {"RED TANK Template 001"}
 
+  -- create and setup a spawner
   local spawner_RED_TANK = RepeatingSpawner.new("RED TANK", routeTbl_RED_TANK, templateTbl_RED_TANK)
   spawner_RED_TANK.setSubMenuBranchName("RED GROUND")
   spawner_RED_TANK.setRadiusVariation(3000)
@@ -97,11 +99,34 @@ do
   spawner_RED_TANK.setInitialLevel(1)
   spawner_RED_TANK.run()
 
-  -- ----------------------------------------
-  -- A helper function to add a F10 menu for checking the current status of the spwaners
 
+  -- A helper function to add a F10 menu for checking the current status of the spwaners
   MenuShowRepeatingSpawnerStatus({spawner_RED_CAP, spawner_RED_TANK})
 end
 ```
 
 ## OnetimeSpawner
+
+Create 30 AAA randomly from 50 preset locations at mission start with respawn after destroyed enabled.
+```lua
+do
+  -- create the route table with 50 routes
+  local routeTbl_RED_AAA = {}
+  for i = 1, 50 do
+    table.insert(routeTbl_RED_AAA, "RED AAA " .. string.format("%03d", i))
+  end
+
+  -- create the template table
+  local templateTbl_RED_AAA = {"RED AAA Template 001", "RED AAA Template 001", "RED AAA Template 002"}
+
+  -- create a spawner
+  local spawner_RED_AAA = OnetimeSpawner.new("RED AAA", routeTbl_RED_AAA, templateTbl_RED_AAA, 30)
+
+  -- set respawn after destroyed on (default is off without calling this function)
+  spawner_RED_AAA.setRespawn(0.25, 1800, 0.1)
+
+  -- activate the spawner
+  spawner_RED_AAA.run()
+end
+```
+
