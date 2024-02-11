@@ -321,6 +321,56 @@ Set the position of escorts will stay relative to the spawned units.
 
 ### `RepeatingSpawner.setEscort(escortRouteTable, escortTemplateTable, escortLastWaypoint, escortEngageDistance)`
 
+Enable and set the escorts for spawned units.  
+**escortRouteTable** must have the same number of elements as **routeTable** used in the constructor. Each pair of routes should be placed closed together.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#table <b>escortRouteTable</b></td>
+    <td>The table of escort route's group name strings shown in the ME.</td>
+  </tr>
+  <tr>
+    <td>#table <b>escortTemplateTable</b></td>
+    <td>The table of escort template's group name strings shown in the ME.</td>
+  </tr>
+  <tr>
+    <td>#number <b>escortLastWaypoint</b></td>
+    <td>Number of waypoints (including waypoint 0) to escort.</td>
+  </tr>
+  <tr>
+    <td>#number <b>escortEngageDistance</b></td>
+    <td>The engaging distance in nautical mile.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
+### `RepeatingSpawner.setInitialLevel(level)`
+
+Set the initial level of the spawner (from 1 to 8).  
+Default is 1.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>level</b></td>
+    <td>The initial level of the spawner.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.setScheduleTable(level, schedule)`
 
 ### `RepeatingSpawner.getSubMenuBranchName()`
