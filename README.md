@@ -158,7 +158,7 @@ end
 RepeatingSpawner constructor.  
 Creates a new RepeatingSpawner object.
 
-#### Parameters:
+**Parameters:**
 <table>
   <tr>
     <td>#string <b>name</b></td>
@@ -174,7 +174,7 @@ Creates a new RepeatingSpawner object.
   </tr>
 </table>
 
-#### Return values:
+**Return values:**
 <table>
   <tr>
     <td>#RepeatingSpawner</td>
@@ -186,7 +186,7 @@ Creates a new RepeatingSpawner object.
 
 Set the name of the sub menu this spawner's menu will be located at.
 
-#### Parameters:
+**Parameters:**
 <table>
   <tr>
     <td>#string <b>menuName</b></td>
@@ -194,7 +194,7 @@ Set the name of the sub menu this spawner's menu will be located at.
   </tr>
 </table>
 
-#### Return values:
+**Return values:**
 <table>
   <tr>
     <td>#nil</td>
