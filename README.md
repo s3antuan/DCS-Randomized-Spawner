@@ -60,8 +60,13 @@ Name the group name accordingly and set them as late activation as well.
 
 ## RepeatingSpawner
 
-Create a spawner for red CAP and tank.  
-Check the document for more info on how to set the schedules.
+There are total 8 levels. Each level can have its own preset schedule for spawning. The default level is 1. 
+
+Every schedules from levels smaller than and equal to the current level are considered active. E.g. the current level is 3, then schedules from level 1, 2, and 3 will be executed.
+
+Check the document [below]() for more info on how to set the schedules.
+
+Create a spawner for red CAP and tank.
 
 ```lua
 do
@@ -419,7 +424,25 @@ Examples:
 
 ### `RepeatingSpawner.getSubMenuBranchName()`
 
+Return the sub menu branch name.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#string</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.getLevel()`
+
+Return the current level.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#number</td>
+  </tr>
+</table>
 
 ### `RepeatingSpawner.getCount()`
 
