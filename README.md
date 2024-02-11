@@ -302,6 +302,23 @@ Set the height variation (between $height$ and $height + distance$) of the waypo
 
 ### `RepeatingSpawner.setEscortPointVec(pointVec3)`
 
+Set the position of escorts will stay relative to the spawned units.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>Core.Point#POINT_VEC3 <b>pointVec3</b></td>
+    <td>The position of escorts will stay relative to the spawned units. Defined in MOOSE.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.setEscort(escortRouteTable, escortTemplateTable, escortLastWaypoint, escortEngageDistance)`
 
 ### `RepeatingSpawner.setScheduleTable(level, schedule)`
