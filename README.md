@@ -506,3 +506,84 @@ Create an option in the F10 menu for all coalition sides to check the current sp
     <td>#nil</td>
   </tr>
 </table>
+
+### `OnetimeSpawner.new(name, routeTable, templateTable, numberOfSpawn)`
+
+OnetimeSpawner constructor.  
+Creates a new OnetimeSpawner object.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>name</b></td>
+    <td>The name of the spawner. Must be Unique within the mission.</td>
+  </tr>
+  <tr>
+    <td>#table <b>routeTable</b></td>
+    <td>The table of route's group name strings shown in the ME.</td>
+  </tr>
+  <tr>
+    <td>#table <b>templateTable</b></td>
+    <td>The table of template's group name strings shown in the ME.</td>
+  </tr>
+  <tr>
+    <td>#number <b>numberOfSpawn</b></td>
+    <td>Number of groups to spawn. Must be smaller than or equal to the length of routeTable.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#OnetimeSpawner</td>
+    <td>self</td>
+  </tr>
+</table>
+
+### `OnetimeSpawner.setRespawn(respawnProb, respawnTime, respawnTimeProb)`
+
+Set respawn after destroyed on.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>respawnProb</b></td>
+    <td>The probability for respawn after destroyed (0 ~ 1).</td>
+  </tr>
+  <tr>
+    <td>#number <b>respawnTime</b></td>
+    <td>The time for respawn after destroyed in seconds. The timer only starts when the entire group is destroyed.</td>
+  </tr>
+  <tr>
+    <td>#number <b>respawnTimeProb</b></td>
+    <td>The time variation of the respawn (0 ~ 1).</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
+### `OnetimeSpawner.run()`
+
+Activate the spawner. Run this function only after all the settings are done. The spawn will happen once the mission script loads.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
+### `OnetimeSpawnerGroup.new(name, spawnerTable)`
+
+### `OnetimeSpawnerGroup.setSubMenuBranchName(menuName)`
+
+### `OnetimeSpawnerGroup.setControlGroupName(groupName)`
+
+### `OnetimeSpawnerGroup.setControlSide(side)`
+
+### `OnetimeSpawnerGroup.run()`
