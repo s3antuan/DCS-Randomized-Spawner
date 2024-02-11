@@ -29,7 +29,8 @@ Inside the mission editor, first go to the trigger tab. Load MOOSE and [AI_Spawn
 
 ![image]()
 
-Then, load your mission script 5 seconds after mission start.
+Then, load your mission script 5 seconds after mission start.  
+It is important to NOT load the mission script at mission start, otherwise there is a chance some functions won't work.
 
 ![image]()
 
@@ -203,7 +204,44 @@ Set the name of the sub menu this spawner's menu will be located at.
 
 ### `RepeatingSpawner.setControlGroupName(groupName)`
 
+With this function called, ONLY the set group will have access to the spawner options in the F10 menu.  
+The set group must be alive at the moment the mission script loads. In other word, mission host must enter the slot and load into the cockpit before unpause the mission at the start. 
+
+By default, the F10 menu access is set to coalition BLUE.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>groupName</b></td>
+    <td>The name of the group that will only have F10 menu access to the spawner options.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.setControlSide(side)`
+
+Set the F10 menu access to the spawner options to a coalition.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>side</b></td>
+    <td>Either "BLUE" or "RED". Default is coalition BLUE.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
 
 ### `RepeatingSpawner.setSpawnLimit(limit)`
 
