@@ -1,7 +1,6 @@
 # DCS-Randomized-Spawner
 
-A script to set in advance and control during mission the spawning of AI units with randomized route and template for DCS world. 
-
+A script to set in advance and control during mission the spawning of AI units with randomized route and template for DCS world.  
 This script is written based on [MOOSE](https://github.com/FlightControl-Master/MOOSE).
 
 
@@ -24,12 +23,9 @@ While the former gives access to everyone in that coalition, the latter limits t
 
 ### Adding the Script
 
-This script requires MOOSE. You can find the latest version of MOOSE [here](https://github.com/FlightControl-Master/MOOSE).
-
-Be aware that this script does *not* work with [MIST](https://github.com/mrSkortch/MissionScriptingTools) loaded.
-
-Inside the mission editor, first go to the trigger tab.
-Load MOOSE and [AI_Spawner_v1.lua](AI_Spawner_v1.lua) at mission start.
+This script requires MOOSE. You can find the latest version of MOOSE [here](https://github.com/FlightControl-Master/MOOSE).  
+Be aware that this script does *not* work with [MIST](https://github.com/mrSkortch/MissionScriptingTools) loaded.  
+Inside the mission editor, first go to the trigger tab. Load MOOSE and [AI_Spawner_v1.lua](AI_Spawner_v1.lua) at mission start.
 
 ![image]()
 
@@ -62,6 +58,9 @@ Name the group name accordingly and set them as late activation as well.
 ![image]()
 
 ## RepeatingSpawner
+
+Create a spawner for red CAP and tank.  
+Check the document for more info on how to set the schedules.
 
 ```lua
 do
@@ -151,4 +150,84 @@ do
   group_RED_SAM.run()
 end
 ```
+
+## Doccuments
+
+### `RepeatingSpawner.new(name, routeTable, templateTable)`
+
+RepeatingSpawner constructor.  
+Creates a new RepeatingSpawner object.
+
+#### Parameters:
+<table>
+  <tr>
+    <td>#string <b>name</b></td>
+    <td>The name of the spawner. Must be Unique within the mission.</td>
+  </tr>
+  <tr>
+    <td>#table <b>routeTable</b></td>
+    <td>The table of route's group name strings shown in the ME.</td>
+  </tr>
+  <tr>
+    <td>#table <b>templateTable</b></td>
+    <td>The table of template's group name strings shown in the ME.</td>
+  </tr>
+</table>
+
+#### Return values:
+<table>
+  <tr>
+    <td>#RepeatingSpawner</td>
+    <td>self</td>
+  </tr>
+</table>
+
+### `RepeatingSpawner.setSubMenuBranchName(menuName)`
+
+Set the name of the sub menu this spawner's menu will be located at.
+
+#### Parameters:
+<table>
+  <tr>
+    <td>#string <b>menuName</b></td>
+    <td>The name of the sub menu branch.</td>
+  </tr>
+</table>
+
+#### Return values:
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
+### `RepeatingSpawner.setControlGroupName(groupName)`
+
+### `RepeatingSpawner.setControlSide(side)`
+
+### `RepeatingSpawner.setSpawnLimit(limit)`
+
+### `RepeatingSpawner.setRadiusVariation(distance)`
+
+### `RepeatingSpawner.setHeightVariation(distance)`
+
+### `RepeatingSpawner.setEscortPointVec(pointVec3)`
+
+### `RepeatingSpawner.setEscort(escortRouteTable, escortTemplateTable, escortLastWaypoint, escortEngageDistance)`
+
+### `RepeatingSpawner.setScheduleTable(level, schedule)`
+
+### `RepeatingSpawner.getSubMenuBranchName()`
+
+### `RepeatingSpawner.getLevel()`
+
+### `RepeatingSpawner.getCount()`
+
+### `RepeatingSpawner.getLimit()`
+
+### `RepeatingSpawner.spawnOneGroup()`
+
+### `RepeatingSpawner.run()`
+
+### `MenuShowRepeatingSpawnerStatus(repeatingSpawnerTable)`
 
