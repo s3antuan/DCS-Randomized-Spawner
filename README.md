@@ -373,6 +373,47 @@ Default is 1.
 
 ### `RepeatingSpawner.setScheduleTable(level, schedule)`
 
+Set the spawning schedules for each level.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>level</b></td>
+    <td>The level to set (from 1 to 8).</td>
+  </tr>
+  <tr>
+    <td>#table <b>schedule</b></td>
+    <td>A table of tables representing the spawning schedule.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
+#### Schedule table
+
+Parameter **schedule** is a table of tables looks like below:
+
+`{ {A, B, C, D, E}, {A, B, C, D, E}, ... }`, where:
+
+- **A:** time for the first spawn.
+- **B:** time variation of the first spawn (0 ~ 1) i.e., actual time for the first spawn = A ± (A * B)
+- **C:** time interval between each subsequent spawns.
+- **D:** time variation of subsequent spawns (0 ~ 1) i.e., actual time for the spawn = A + C * i ± (C * D) where i = 1, 2, 3, ...
+- **E:** time for the scheduled spawning to stop.
+
+All unit in seconds.
+
+Examples:
+
+- `{A, B, nil, nil, nil}` or `{A, B}` spawns only once.
+- `{A, B, C, D, nil}` or `{A, B, C, D}` spawns repeatly on schedule.
+- `{A, B, C, D, E}` spawns repeatly on schedule until stop time is reached.
+
 ### `RepeatingSpawner.getSubMenuBranchName()`
 
 ### `RepeatingSpawner.getLevel()`
