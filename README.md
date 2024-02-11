@@ -373,7 +373,9 @@ Default is 1.
 
 ### `RepeatingSpawner.setScheduleTable(level, schedule)`
 
-Set the spawning schedules for each level.
+Set the spawning schedules for each level.  
+Only the levels set via this function will be shown in the F10 menu as an option.  
+There is always a "spawn one group instantly" option even without calling this function.
 
 **Parameters:**
 <table>
@@ -410,6 +412,7 @@ All unit in seconds.
 
 Examples:
 
+- Empty `{}` spawns nothing.
 - `{A, B, nil, nil, nil}` or `{A, B}` spawns only once.
 - `{A, B, C, D, nil}` or `{A, B, C, D}` spawns repeatly on schedule.
 - `{A, B, C, D, E}` spawns repeatly on schedule until stop time is reached.
