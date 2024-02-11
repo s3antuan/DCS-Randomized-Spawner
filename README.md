@@ -62,9 +62,9 @@ Name the group name accordingly and set them as late activation as well.
 
 There are total 8 levels. Each level can have its own preset schedule for spawning. The default level is 1. 
 
-Every schedules from levels smaller than and equal to the current level are considered active. E.g. the current level is 3, then schedules from level 1, 2, and 3 will be executed.
+Every schedules from levels smaller than and equal to the current level are considered active. E.g. the current level is 3, then schedules from level 1, 2, and 3 will be executed, schedules from level 4 and above won't.
 
-Check the document [below]() for more info on how to set the schedules.
+Check the document [below](https://github.com/s3antuan/DCS-Randomized-Spawner/tree/main#schedule-table) for more info on how to set the schedules.
 
 Create a spawner for red CAP and tank.
 
@@ -446,11 +446,63 @@ Return the current level.
 
 ### `RepeatingSpawner.getCount()`
 
+Return the current count of already spawned groups.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#number</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.getLimit()`
+
+Return the maximum amount of groups the spawner can spawn.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#number</td>
+  </tr>
+</table>
 
 ### `RepeatingSpawner.spawnOneGroup()`
 
+Spawn one group immediately.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.run()`
+
+Activate the spawner. Run this function only after all the settings are done.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
 
 ### `MenuShowRepeatingSpawnerStatus(repeatingSpawnerTable)`
 
+Create an option in the F10 menu for all coalition sides to check the current spawner status.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#table <b>repeatingSpawnerTable</b></td>
+    <td>A table of RepeatingSpawner objects. Any non-table value (e.g. a string) in this table will result in a blank line for better readability.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
