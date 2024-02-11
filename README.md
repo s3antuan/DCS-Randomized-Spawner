@@ -245,9 +245,60 @@ Set the F10 menu access to the spawner options to a coalition.
 
 ### `RepeatingSpawner.setSpawnLimit(limit)`
 
+Set the maximum amount of groups the spawner can spawn.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>limit</b></td>
+    <td>The maximum amount of groups the spawner can spawn.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.setRadiusVariation(distance)`
 
+Set the radius variation of the waypoints in feet.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>distance</b></td>
+    <td>The radius variation in feet.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `RepeatingSpawner.setHeightVariation(distance)`
+
+Set the height variation (between $height$ and $height + distance$) of the waypoints in feet.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#number <b>distance</b></td>
+    <td>The height variation in feet.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
 
 ### `RepeatingSpawner.setEscortPointVec(pointVec3)`
 
