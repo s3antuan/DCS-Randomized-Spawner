@@ -580,10 +580,96 @@ Activate the spawner. Run this function only after all the settings are done. Th
 
 ### `OnetimeSpawnerGroup.new(name, spawnerTable)`
 
+OnetimeSpawnerGroup constructor.  
+Creates a new OnetimeSpawnerGroup object.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>name</b></td>
+    <td>The name of the group.</td>
+  </tr>
+  <tr>
+    <td>#table <b>spawnerTable</b></td>
+    <td>A table of OnetimeSpawner.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#OnetimeSpawnerGroup</td>
+    <td>self</td>
+  </tr>
+</table>
+
 ### `OnetimeSpawnerGroup.setSubMenuBranchName(menuName)`
+
+Set the name of the sub menu.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>menuName</b></td>
+    <td>The name of the sub menu branch.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
 
 ### `OnetimeSpawnerGroup.setControlGroupName(groupName)`
 
+With this function called, ONLY the set group will have access to the spawner options in the F10 menu.  
+The set group must be alive at the moment the mission script loads. In other word, mission host must enter the slot and load into the cockpit before unpause the mission at the start. 
+
+By default, the F10 menu access is set to coalition BLUE.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>groupName</b></td>
+    <td>The name of the group that will only have F10 menu access to the spawner options.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `OnetimeSpawnerGroup.setControlSide(side)`
 
+Set the F10 menu access to the options to a coalition.
+
+**Parameters:**
+<table>
+  <tr>
+    <td>#string <b>side</b></td>
+    <td>Either "BLUE" or "RED". Default is coalition BLUE.</td>
+  </tr>
+</table>
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
+
 ### `OnetimeSpawnerGroup.run()`
+
+Activate the spawner group. Run this function only after all the settings are done.
+
+**Return values:**
+<table>
+  <tr>
+    <td>#nil</td>
+  </tr>
+</table>
