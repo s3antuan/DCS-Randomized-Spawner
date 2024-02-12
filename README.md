@@ -27,12 +27,12 @@ This script requires MOOSE. You can find the latest version of MOOSE [here](http
 Be aware that this script does *not* work with [MIST](https://github.com/mrSkortch/MissionScriptingTools) loaded.  
 Inside the mission editor, first go to the trigger tab. Load MOOSE and [AI_Spawner_v1.lua](AI_Spawner_v1.lua) at mission start.
 
-![image]()
+![image](img/01.png)
 
 Then, load your mission script 5 seconds after mission start.  
 It is important to NOT load the mission script at mission start, otherwise there is a chance some functions won't work.
 
-![image]()
+![image](img/02.png)
 
 ### Basic Guidelines
 
@@ -48,15 +48,11 @@ Routes are where the spawner will choose to spawn units from.
 Set the waypoints, tasks, addvance waypoint options, and AI difficulty here.
 Name the group name accordingly. Be sure to set them as late activation.
 
-![image]()
-
 ### Placing Templates
 
 Templates can be placed anywhere on the map. 
 Set the vehicle type, number of vehicles per group, their payloads, and their liveries here. 
 Name the group name accordingly and set them as late activation as well.
-
-![image]()
 
 ## RepeatingSpawner
 
