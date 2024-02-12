@@ -8,6 +8,12 @@ This script is written based on [MOOSE](https://github.com/FlightControl-Master/
 
 This script is designed for event mission hosts to easily setup the spawners before the mission and make setting changes on the spawners via F10 menu during the mission.
 
+![image](img/03.png)
+
+![image](img/04.png)
+
+![image](img/05.png)
+
 This script comes with two types of spawner: **RepeatingSpawner** and **OnetimeSpawner**. 
 
 **RepeatingSpawner** is used when you want AI units to repeatedly spawn into the map with a given schedule. 
