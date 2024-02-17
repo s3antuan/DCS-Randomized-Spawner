@@ -159,7 +159,7 @@ do
 end
 ```
 
-## Doccuments
+## Documents
 
 ### `RepeatingSpawner.new(name, routeTable, templateTable)`
 
