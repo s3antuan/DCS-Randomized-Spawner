@@ -3,6 +3,8 @@
 A script to set in advance and control during mission the spawning of AI units with randomized route and template for DCS world.  
 This script is written based on [MOOSE](https://github.com/FlightControl-Master/MOOSE).
 
+A revised version of this script is [here](https://github.com/s3antuan/DCS-UniversalSpawner).
+
 
 ## Abstract
 
